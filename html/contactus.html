@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/layoutcontactus.css">
+    <title>Contact US</title>
+</head>
+<body>
+    <div class="container">
+        <div class="containercontactus">
+            
+            <form action="#" name="contactusform">
+                <div class="headerform"><h2>Contact Us</h2></div>
+                <div class="bodyform">
+                    <div class="field"><label >Name</label><div class="feildinput"><input type="text" id="name" name="name"><div class="error" id="errorname"  style="visibility:hidden;" role="alert">please fill name</div></div></div>
+                    <div class="field"><label >Email</label><div class="feildinput"><input type="text" id="email" name="email"><div class="error" id="erroremail"  style="visibility:hidden;">please fill email</div></div></div>
+                    <div class="field"><label >Contact Number</label><div class="feildinput"><input type="text" id="contactnumber" name="contactnumber"><div class="error" id="errorcontactnumber"  style="visibility:hidden;">please fill contact number</div></div></div>
+                    <div class="field"><label >Website</label><div class="feildinput"><input type="text" id="website" name="website"><div class="error" id="errorwebsite"  style="visibility:hidden;">please fill website</div></div></div>
+                    <div class="field"><label >Message</label><div class="feildinput"><textarea name="message" id="message" cols="30" rows="10"></textarea><div class="error" id="errormessage"  style="visibility:hidden;">please fill message</div></div></div>
+                </div>
+                <div class="footerform">
+                    <button type="button" onclick="check()">Submit</button><br>
+                    <div class="messagecontactform" id="messagecontactusform" style="visibility: hidden;">message</div>
+                </div>
+            </form>
+        </div>
+    </div>
+    <script src="../js/contactusform.js"></script>
+</body>
+</html>

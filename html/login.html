@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel = "icon" href = 
+        "../img/logo.png" 
+        type = "image/x-icon">
+    <link rel="stylesheet" href="../css/layout.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Login Example</title>
+</head>
+<body>
+    <div class="container">
+        <div class="column">
+            <h2 class="headerform">
+                <img src="../img/logo.png" alt="">
+                <div>Log-in to your account</div>
+            </h2>
+            <form action="#" class="formlogin" >
+                <div class="containerform">
+                    <div class="field">
+                        <div class="fieldchilren">
+                           <i class="fa fa-user"></i>
+                            <input  type="text" id="email" name="email" placeholder="E-mail address">
+                        </div>
+                    </div>
+                    <div class="field">
+                        <div class="fieldchilren">
+                            <i class="fa fa-lock"></i>
+                            <input type="password" id="password" name="password" placeholder="password">
+                        </div>
+                    </div>
+                    <button type="button" onclick="check()" class="buttonlogin">Login</button>
+                </div>
+                <div class="messageform">
+                    <ul>
+                        <li id="checknullemail" style="visibility:hidden;">Please enter your e-mail</li>
+                        <li id="checkvalidemail" style="visibility:hidden;">Please enter a valid e-mail</li>
+                        <li id="checknullpassword" style="visibility:hidden;">Please enter your password</li>
+                        <li id="checkvalidpassword" style="visibility:hidden;">Your password must be at least 6 characters</li>
+                    </ul>
+                    
+                </div>
+            </form>
+            <div class="containersigup">
+                " New to us? "<a href="#">Sign Up</a>
+            </div>
+        </div>
+    </div>
+    <script src="../js/login.js">
+    </script>
+</body>
+</html>

@@ -1,0 +1,87 @@
+.container{
+    display: flex;
+    justify-content: center;
+    font-family: "Lucida Grande", sans-serif;
+    height: 100vh;
+}
+.containercontactus{
+    height: auto;
+    align-self: center !important;
+    width: 26%;
+    background-color: rgb(35, 100, 150);
+    
+}
+.containercontactus form{
+    height: auto;
+}
+.headerform{
+    height: 20%;
+    color: #fdfafa;
+    text-align: center;
+}
+.footerform{
+    
+    height: 20%;
+    background-color: #796a6a;
+    text-align: center;
+}
+.bodyform{
+    height:60%;
+    background-color: aliceblue;
+    text-align: left;
+    color: #6f6f6f;
+}
+.error{
+    font-size: 1em;
+    width: 30%;
+    background-color: #c94545;
+    color: #fcf7f7;
+}
+.field{
+    margin-top: 5px;
+    padding: 2px 2px;
+    width: 100%;
+    display: inline-flex;
+}
+.field input{
+    
+    width: 70%;
+    display: inline-block;
+}
+.field label{
+    width: 30%;
+    display: inline-block;
+}
+.field textarea{
+    width: 100%;
+    display: inline-block;
+}
+.feildinput{
+    width: 70%;
+    display: flex;
+}
+.footerform button{
+    margin: 5px 5px;
+    padding: 5px;
+    border-radius: 5px;
+    font-size: 1.3em;
+    background-color:  #5a6dad;
+    color: #f7f8fa;
+}
+.messagecontactform{
+    margin: 5px;
+    font-size: 1.1em;
+    color: #e44a4a;
+}
+@media only screen and (max-width: 480px) {
+    .field{
+        display: inline-block;
+    }
+    .feildinput{
+        width: 100%;
+        display: flex;
+    }
+    .containercontactus{
+        width: 75%;
+    }
+}

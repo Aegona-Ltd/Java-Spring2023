@@ -1,0 +1,132 @@
+body{
+    display: flex;
+    background-color: #DADADA;
+    justify-content: center;
+    font-family: 'Lato', 'Helvetica Neue', Arial, Helvetica, sans-serif;
+}
+
+.container{
+    
+    height: 100vh;
+    width: 33%;
+    justify-content: center;
+    text-align: center;
+    display: flex;
+}
+.column{
+    max-width: 450px;
+    width: 100%;
+    height: 45%;
+    
+    vertical-align: middle;
+    align-self: center !important;
+}
+.headerform{
+    justify-content: center;
+    color: #00B5AD !important;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    font-family: 'Lato', 'Helvetica Neue', Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    line-height: 1.28571429em;
+    text-transform: none;
+    height: 15%;
+}
+.field{
+    margin: 0em 0em 1em;
+    color: #9F3A38;
+    display: block;
+    height: 3vh;
+    
+}
+.fieldchilren{
+    border-color:#9F3A38;
+    border-radius: 3px;
+    border: 1px solid;
+    width: 100%;
+    display: inline-flex;
+    font-size: 1em;
+    height: 100%;
+    
+}
+.fieldchilren i{
+    padding: 7px;
+    padding-left: 8px;
+    left: auto;
+    right: auto;
+    display: inline-block;
+    position: absolute;
+}
+.fieldchilren input{
+    
+    padding-left: 2.67142857em !important;
+    padding-right: 1em !important;
+    display: inline-block;
+    width: 100%;
+    border: none;
+}
+
+.headerform img{
+    width: 2.5em;
+    height: auto;
+}
+.headerform div{
+    
+    padding-left: 0.75rem;
+    vertical-align: middle;
+    align-self: center !important;
+}
+.formlogin{
+    
+    height: 70%;
+}
+.containerform{
+    border: 1px solid rgba(34, 36, 38, 0.15);
+    position: relative;
+    background-color: rgb(255, 255, 255);
+    padding: 1em 1em;
+}
+.buttonlogin{
+    font-size: 25px;
+    border: none;
+    border-radius: 3px;
+    background-color: #00B5AD;
+    color: #FFFFFF;
+    text-shadow: none;
+    width: 100%;
+}
+.containersigup{
+ display: block;
+}
+.containersigup a{
+     color: #4183C4;
+}
+.messageform{
+    
+    color: #9F3A38;
+    height: auto;
+    border: 1px solid rgba(34, 36, 38, 0.15);
+    position: relative;
+    background-color: rgb(255, 255, 255);
+    padding: 1em 1em;
+    margin-top: 10px;
+}
+.messageform li{
+    text-align: left;
+    margin: 0em 0em 0.3em 1em;
+}
+.containersigup{
+    
+    margin-top: 15px;
+    padding: 15px;
+    height: 3vh;
+    font-size: 1em;
+    background-color: rgb(255, 255, 255);
+}
+
+.containersigup a{
+    
+    color: #4183C4;
+    text-decoration: none;
+}
