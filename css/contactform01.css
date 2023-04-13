@@ -1,0 +1,128 @@
+.container{
+    display: flex;
+    height: 100vh;
+    
+    justify-content: center;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+.containerusform{
+    display: flex;
+    vertical-align: middle;
+    align-self: center !important;
+    width: 45%;
+    height: 65%;
+    
+}
+.containerfillform{
+    box-shadow: 5px 5px 24px 5px skyblue;
+    background-color: aliceblue;
+    display: block;
+    border-radius: 5px 0px 0px 5px;
+    
+    align-self: center;
+    height: 85%;
+    width: 60%;
+    
+}
+.containerinfoform{
+    background-color: rgb(132, 152, 216) ;
+    border-radius: 5px;
+    vertical-align: middle;
+    align-self: center;
+    
+    height: 100%;
+    width: 40%;
+}
+.containerfillformheader{
+    color: #3f3939;
+    margin: 8px;
+    margin-left: 30px;
+}
+.containerfillformbody{
+    
+    display: block;
+    margin-left: 30px;
+}
+.containerfillformbodychilren{
+    
+    padding: 5px;
+    display: flex;
+    width: 85%;
+}
+.containerfillformbodychilren input{
+    
+    font-size: 1.5em;
+    padding: 5px;
+    height: auto;
+    width: 100%;
+}
+.containerfillformbodychilren .inputemail{
+    margin-left: 15px;
+}
+.field{
+    
+    padding: 5px;
+    height: auto;
+    width: 83%;
+}
+.field input{
+    font-size: 1.5em;
+    padding: 5px;
+    width: 100%;
+}
+.fieldtextarea{
+    padding: 5px;
+    height: 18vh;
+    width: 83.5%;
+}
+textarea{
+    font-size: 1.5em;
+    padding: 5px;
+    height: 100%;
+    width: 100%;
+}
+.containerfillformfooter{
+    display: block;
+    margin-top: 15px;
+    margin-left: 30px;
+}
+.buttonfooterform{
+    height: 100%;
+    padding: 5px;
+}
+.buttonfooterform button{
+    background-color: rgb(132, 152, 216);
+    border: none;
+    padding: 10px;
+    font-size: 1em;
+    border-radius: 5px;
+}
+.fieldinfoformheader{
+    font-size: 1.2em;
+    padding: 5px;
+    margin: 30px 0px 0px 30px;
+}
+.fieldinfoformheader h2{
+    color: #fdfcfc;
+}
+.fieldinfoformbody{
+    height: auto;
+    color: #fdfcfc;
+    margin-left: 30px;
+}
+.fieldinfoformbodychilren{
+    
+    font-size: 1.2em;
+    padding: 15px;
+    display: flex;
+}
+.fieldinfoformbodychilren i{
+    height: 100%;
+    
+    font-size: 1em;
+    width: 15%;
+}
+.fieldinfoformbodychilren label{
+    font-size: 1em;
+    width: 75%;
+}
