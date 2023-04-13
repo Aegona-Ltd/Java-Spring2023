@@ -16,36 +16,31 @@
         <div class="column">
             <h2 class="headerform">
                 <img src="../img/logo.png" alt="">
-                <div>Log-in to your account</div>
+                <div>Đăng nhập vào tài khoản của bạn</div>
             </h2>
             <form action="#" class="formlogin" >
                 <div class="containerform">
                     <div class="field">
                         <div class="fieldchilren">
                            <i class="fa fa-user"></i>
-                            <input  type="text" id="email" name="email" placeholder="E-mail address">
+                            <input  type="text" id="email" name="email" placeholder="Địa chỉ email">
                         </div>
+                        <div class="error"><li id="checknullemail" style="visibility:hidden;">Vui lòng nhập email</li></div>
                     </div>
                     <div class="field">
                         <div class="fieldchilren">
                             <i class="fa fa-lock"></i>
-                            <input type="password" id="password" name="password" placeholder="password">
+                            <input type="password" id="password" name="password" placeholder="Mật khẩu">
                         </div>
+                        
+                        <div class="error"><li id="checknullpassword" style="visibility:hidden;">Vui lòng nhập mật khẩu</li></div>
                     </div>
-                    <button type="button" onclick="check()" class="buttonlogin">Login</button>
+                    <button type="button" onclick="check()" class="buttonlogin">Đăng nhập</button>
                 </div>
-                <div class="messageform">
-                    <ul>
-                        <li id="checknullemail" style="visibility:hidden;">Please enter your e-mail</li>
-                        <li id="checkvalidemail" style="visibility:hidden;">Please enter a valid e-mail</li>
-                        <li id="checknullpassword" style="visibility:hidden;">Please enter your password</li>
-                        <li id="checkvalidpassword" style="visibility:hidden;">Your password must be at least 6 characters</li>
-                    </ul>
-                    
-                </div>
+                
             </form>
             <div class="containersigup">
-                " New to us? "<a href="#">Sign Up</a>
+                "Bạn là người mới ?"<a href="#"> Sign Up</a>
             </div>
         </div>
     </div>
