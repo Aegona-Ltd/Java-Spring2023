@@ -10,7 +10,7 @@
     vertical-align: middle;
     align-self: center !important;
     width: 45%;
-    height: 65%;
+    height: 60%;
     
 }
 .containerfillform{
@@ -21,7 +21,7 @@
     
     align-self: center;
     height: 85%;
-    width: 60%;
+    width: 55%;
     
 }
 .containerinfoform{
@@ -31,7 +31,7 @@
     align-self: center;
     
     height: 100%;
-    width: 40%;
+    width: 45%;
 }
 .containerfillformheader{
     color: #3f3939;
@@ -78,7 +78,7 @@
 }
 textarea{
     border: 0.1px #cad3db solid;
-    font-size: 1.2em;
+    font-size: 1.5em;
     padding: 5px;
     height: 100%;
     width: 100%;
@@ -115,7 +115,7 @@ textarea{
 }
 .fieldinfoformbodychilren{
     
-    font-size: 1.2em;
+    font-size: 1em;
     padding: 15px;
     display: flex;
 }
