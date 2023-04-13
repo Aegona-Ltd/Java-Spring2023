@@ -1,0 +1,157 @@
+*{
+    box-sizing: inherit;
+    /* width: 100%; */
+    border: none;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    height: 100vh;
+    font-family: 'Lato', 'Helvetica Neue', Arial, Helvetica, sans-serif;
+}
+
+.colunm{
+    text-align: center;
+    vertical-align: middle;
+    align-self: center !important;
+    max-width: 420px;
+}
+
+.ui.teal.header{
+    color: #00B5AD !important;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: -40px;
+}
+
+.ui[class*="center aligned"].grid{
+    justify-content: center;
+}
+
+.ui.grid{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: stretch;
+    padding: 0em;
+}
+.ui.grid > .colunm:only-child{
+    width: 100%;
+}
+
+.ui.form{
+    background: #ffffff;
+    position: relative;
+    max-width: 100%;
+}
+
+.ui.input{
+    position: relative;
+    display: inline-flex;
+    border: 1px solid;
+    height: 30px;
+    width: 100%;
+    border-radius: 0.28571429rem;
+    min-height: 2.4em;
+    line-height: 1em;
+    color: rgba(197, 194, 194, 0.87);
+    
+}
+
+/* .ui.image{
+    position: relative;
+    display: inline-block;
+    vertical-align: middle;
+    max-width: 100%;
+    background-color: transparent;
+} */
+
+.images{
+    width: 60px;
+    height: 60px;
+    margin-top: 90px;
+}
+
+.content{
+    padding-left: 0.75rem;
+    vertical-align: middle;
+}
+
+input{
+    width: 100%;
+    border: none;
+    outline: none;
+    /* color: rgba(197, 194, 194, 0.87); */
+}
+
+.field{
+    margin: 0em 0em 1em;
+}
+
+
+.ui.stacked.segment{
+    padding-bottom: 1.4em;
+}
+
+.ui.segment{
+    position: relative;
+    background: #ffffff;
+    margin: 1rem 0em;
+    padding: 1em 1em;
+}
+
+.ui.button{
+    cursor: pointer;
+    width: 100%;
+    background-color: #00B5AD;
+    color: #ffffff;
+    margin: 0em 0.25em 0em 0em;
+    padding: 0.78571429em 0.1em 0.78571429em;
+    border: none;
+    outline: none;
+    min-height: 1.5em;
+    text-transform: none;
+    line-height: 1em;
+    font-weight: bold;
+    border-radius: 0.28571429rem;
+    font-style: normal;
+    text-align: center;
+}
+
+.ui.button:hover{
+    background-color: #009c95;
+}
+
+.ui.message{
+    position: relative;
+    min-height: 1em;
+    margin: 1em 0em;
+    background: #f8f8f9;
+    padding: 1em 1.5em;
+}
+
+a{
+    color: #4183C4;
+    text-decoration: none;
+}
+
+i.icon{
+    display: inline-block;
+    height: 1.4em;
+    width: 1.4em;
+    vertical-align: middle;
+    padding-left: 0.5em !important;
+    padding-right: 0.5em;
+    margin-top: 10px;
+    color: rgba(121, 117, 117, 0.87);
+  
+}
+
+
+
+
+
+

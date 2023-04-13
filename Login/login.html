@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Example - Semantic</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="shortcut icon" type="image/png" href="assets/images/logo.png">
+    <style>
+        body{
+            background-color: #DADADA;
+        }
+        body > .grid{
+            height: 100%;
+        }
+        .image{
+            margin-top: -100px;
+            height: 100%;
+            width: 100%;
+        }
+        .column{
+            max-width: 450px;
+        }
+    </style>
+</head>
+<body>
+    <div class="ui middle aligned center aligned grid">
+        <div class="colunm">
+            <div class="ui teal header"> 
+                <div class="images">
+                    <img src="./assets/images/logo.png" class="image">
+                </div>
+                <h2 class="content">Log-in to your account</h2>
+            </div>
+            <form action="" class="ui form">
+                <div class="ui stacked segment">
+                    <div class="field">
+                        <div class="ui input">
+                            <i class="fa fa-user icon"></i>
+                            <input type="text" id="a" name="email" placeholder="E-mail address" >
+                        </div>
+                    </div>
+                    <div class="field">
+                        <div class="ui input">
+                            <i class="fa fa-lock icon"></i>
+                            <input type="password" id="b" name="password" placeholder="Password">
+                        </div>
+                    </div>
+                    <button class="ui button" type="button" onclick="checkOption()">Login</button>
+                </div>
+                <!-- <div class="errors">
+                    <ul>
+                        <li id='requestDropDown' style="visibility:hidden;">Please enter your e-mail</li>
+                        <li id='requestDropDown2' style="visibility:hidden;">Please enter a valid e-mail</li>
+                        <li id='requestDropDown3' style="visibility:hidden;">Please enter your password</li>
+                        <li id='requestDropDown4' style="visibility:hidden;">Your password must be at least 6 characters</li>
+                    </ul>
+                </div> -->
+            </form>
+            
+            <div class="ui message">
+                " New to us? "
+                <a href="#">Sign Up</a>
+            </div>
+            
+        </div>
+
+    </div>
+
+    <script>
+        function checkOption(){
+        //This will fire on changing of the value of "requests"
+        var dropDown = document.getElementById("a");
+        // const elements = document.getElementsByClassName("error-c");
+
+        // for (let i = 0; i < elements.length; i++) {
+        //     const element = elements[i];
+        //     element.style.visibility = 'visible';
+        //     console.log('element', element);
+        // }
+        var textBox = document.getElementById("requestDropDown");
+        var textBox2 = document.getElementById("requestDropDown2");
+        var mailformat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+        console.log(dropDown.value);
+        
+        if(dropDown.value == 0){
+            textBox.style.visibility = "visible";
+            textBox2.style.visibility = "visible";
+        }
+
+        var dropDown2 = document.getElementById("b");
+        var textBox3 = document.getElementById("requestDropDown3");
+        var textBox4 = document.getElementById("requestDropDown4");
+        console.log(dropDown2.value);
+        if(dropDown2.value == 0){
+            textBox3.style.visibility = "visible";
+            textBox4.style.visibility = "visible";
+        }
+
+}
+    </script>
+</body>
+</html>
