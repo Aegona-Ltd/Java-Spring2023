@@ -20,9 +20,7 @@
             height: 100%;
             width: 100%;
         }
-        .column{
-            max-width: 450px;
-        }
+        
     </style>
 </head>
 <body>
@@ -36,17 +34,20 @@
             </div>
             <form action="" class="ui form">
                 <div class="ui stacked segment">
-                    <div class="field">
-                        <div class="ui input">
+                    <div class="field ">
+                        <div class="ui input ">
                             <i class="fa fa-user icon"></i>
-                            <input type="text" id="a" name="email" placeholder="E-mail address" >
+                            <input type="text" id="LoginEmail"  name="email" placeholder="E-mail address">
+
                         </div>
+                        <div class="error" id="error" style="visibility: hidden;">Please enter your e-mail</div>
                     </div>
                     <div class="field">
                         <div class="ui input">
                             <i class="fa fa-lock icon"></i>
-                            <input type="password" id="b" name="password" placeholder="Password">
+                            <input type="password" id="LoginPassword" name="password" placeholder="Password">
                         </div>
+                        <div class="error-p" id="error-p" style="visibility: hidden;">Please enter your password</div>
                     </div>
                     <button class="ui button" type="button" onclick="checkOption()">Login</button>
                 </div>
@@ -58,10 +59,11 @@
                         <li id='requestDropDown4' style="visibility:hidden;">Your password must be at least 6 characters</li>
                     </ul>
                 </div> -->
+
             </form>
             
             <div class="ui message">
-                " New to us? "
+                New to us? 
                 <a href="#">Sign Up</a>
             </div>
             
@@ -71,35 +73,140 @@
 
     <script>
         function checkOption(){
+
+        var LoginEmail = document.getElementById('LoginEmail').value;
+        var LoginPassword = document.getElementById('LoginPassword').value;
+        const emailRegex=/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+        // var passwordValidationMessage;
+        // var emailValidationMessage;
+        if(LoginEmail.length==0){
+            document.getElementById("error").style.visibility="visible";
+        }else if(!LoginEmail.match(emailRegex) ){
+            document.getElementById("error").style.visibility="visible";
+            document.getElementById("error").textContent="Please enter a valid e-mail";
+        }
+        else{
+            document.getElementById("error").style.visibility="hidden";
+        }
+
+        minLength = 6;
+        maxLength = 32;
+        if (LoginPassword.length==0) {
+            document.getElementById("error-p").style.visibility="visible";
+        }
+        else if(LoginPassword.length < minLength || LoginPassword.length > maxLength ){
+            document.getElementById("error-p").style.visibility="visible"
+            document.getElementById("error-p").textContent="Your password must be at least 6 characters";
+        }else{
+            document.getElementById("error-p").style.visibility="hidden";
+        }
+        }
+
         //This will fire on changing of the value of "requests"
-        var dropDown = document.getElementById("a");
-        // const elements = document.getElementsByClassName("error-c");
+        // var dropDown = document.getElementById("a");
+        // // const elements = document.getElementsByClassName("error-c");
 
-        // for (let i = 0; i < elements.length; i++) {
-        //     const element = elements[i];
-        //     element.style.visibility = 'visible';
-        //     console.log('element', element);
-        // }
-        var textBox = document.getElementById("requestDropDown");
-        var textBox2 = document.getElementById("requestDropDown2");
-        var mailformat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
-        console.log(dropDown.value);
+        // // for (let i = 0; i < elements.length; i++) {
+        // //     const element = elements[i];
+        // //     element.style.visibility = 'visible';
+        // //     console.log('element', element);
+        // // }
+        // var textBox = document.getElementById("requestDropDown");
+        // var textBox2 = document.getElementById("requestDropDown2");
+        // var mailformat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+        // console.log(dropDown.value);
         
-        if(dropDown.value == 0){
-            textBox.style.visibility = "visible";
-            textBox2.style.visibility = "visible";
-        }
+        // if(dropDown.value == 0){
+        //     textBox.style.visibility = "visible";
+        //     textBox2.style.visibility = "visible";
+        // }
 
-        var dropDown2 = document.getElementById("b");
-        var textBox3 = document.getElementById("requestDropDown3");
-        var textBox4 = document.getElementById("requestDropDown4");
-        console.log(dropDown2.value);
-        if(dropDown2.value == 0){
-            textBox3.style.visibility = "visible";
-            textBox4.style.visibility = "visible";
-        }
+        // var dropDown2 = document.getElementById("b");
+        // var textBox3 = document.getElementById("requestDropDown3");
+        // var textBox4 = document.getElementById("requestDropDown4");
+        // console.log(dropDown2.value);
+        // if(dropDown2.value == 0){
+        //     textBox3.style.visibility = "visible";
+        //     textBox4.style.visibility = "visible";
 
-}
+
+        // }
+        //RemoveAllErrorMessage();
+        
+        // emailValidationMessage = isValidEmail(LoginEmail);
+        // if(emailValidationMessage != "valid"){
+        //     showErrorMessage('LoginEmail' ,emailValidationMessage);
+        //     return false;
+        // }
+
+        // passwordValidationMessage = isValidPassword(LoginPassword);
+        // if(passwordValidationMessage != "valid"){
+        //     showErrorMessage('LoginPassword',passwordValidationMessage);
+        //     return false;
+        // }
+
+
+        //return true;
+        // }
+
+        // function isValidPassword(password){
+
+        //     minLength = 6;
+        //     maxLength = 32;
+
+        //     if(password == ""){
+        //         return "Please enter your password"
+        //     }
+
+        //     if(password.length < minLength || password.length > maxLength){
+        //         return "Your password must be at least 6 characters"
+        //     }
+            
+
+        //     return "valid";
+        // }
+
+        // function isValidEmail(email){
+        //     const emailRegex = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+
+        //     if(email == ""){
+        //         return "Please enter your e-mail"
+        //     }
+
+        //     if(emailRegex.test(email) == false){
+        //         return "Please enter a valid e-mail"
+        //     }
+
+        //     return "valid";
+        // }
+
+        // function RemoveAllErrorMessage(){
+        //     var allErrorField = document.getElementsByClassName('error-input');
+        //     var allErrorMessage = document.getElementsByClassName('error-message');
+        //     var i;
+
+        //     for(i = (allErrorField.length - 1); i >= 0; i--){
+        //         allErrorField[i].classList.remove('error-input');
+        //     }
+        //     for(i = (allErrorMessage.length - 1); i >= 0; i--){
+        //         allErrorMessage[i].remove();
+        //     }
+
+        // }
+
+        // function showErrorMessage(inputBoxID, Message){
+        //     var InputBox = document.getElementById(inputBoxID);
+
+        //     InputBox.classList.add('error-input');
+
+        //     var ErrorMessageElement = document.createElement('p');
+        //     ErrorMessageElement.classList.add('error-message');
+        //     ErrorMessageElement.innerHTML = Message;
+
+        //     LoginEmail.parentNode.insertBefore(ErrorMessageElement,LoginEmail.nextSibling);
+        // }
+        
+
     </script>
 </body>
 </html>

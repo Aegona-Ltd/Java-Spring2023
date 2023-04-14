@@ -16,7 +16,7 @@ body{
     text-align: center;
     vertical-align: middle;
     align-self: center !important;
-    max-width: 420px;
+    max-width: 22%;
 }
 
 .ui.teal.header{
@@ -51,7 +51,7 @@ body{
 .ui.input{
     position: relative;
     display: inline-flex;
-    border: 1px solid;
+    border: 1px solid ;
     height: 30px;
     width: 100%;
     border-radius: 0.28571429rem;
@@ -148,6 +148,35 @@ i.icon{
     margin-top: 10px;
     color: rgba(121, 117, 117, 0.87);
   
+}
+
+.error-input{
+    /* border: 1px solid #ff5b5b; */
+    /* background-color: #ff5b5b; */
+    background: #fff6f6;
+    border-color: #e0b4b4;
+    color: #9f3a38;
+    box-shadow: none;
+}
+
+.error{
+    font-size: 14px;
+    font-weight: bold;
+    color: #9f3a38;
+    text-align: left;
+    margin: 0px 0px 0px 10px;
+    padding: 0px;
+    margin-top: 2px;
+}
+
+.error-p{
+    font-size: 14px;
+    font-weight: bold;
+    color: #9f3a38;
+    text-align: left;
+    margin: 0px 0px 0px 10px;
+    padding: 0px;
+    margin-top: 2px;
 }
 
 

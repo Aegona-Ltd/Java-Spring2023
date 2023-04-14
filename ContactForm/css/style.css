@@ -12,7 +12,7 @@ body{
 
 .container{
     height: 600px;
-    width: 600px;
+    width: 650px;
 }
 
 .contact-title{
@@ -32,10 +32,19 @@ body{
 }
 
 input{
-
+    border: 1px solid #cccccc;
+    border-radius: 5px;
     height: 40px;
-
+    outline: none;
+    color: #000000;
 }
+
+textarea{
+    border: 1px solid #cccccc;
+    border-radius: 5px;
+    outline: none;
+}
+
 .input-subjects{
     width: 358px;
 }
@@ -62,8 +71,8 @@ input{
 .contact-us{
     position: absolute;
     border: 1px solid;
-    height: 440px;
-    width: 300px;
+    height: 500px;
+    width: 340px;
     right: -120px;
     top: -27px;
     background-color: rgb(87, 140, 240);
@@ -71,12 +80,20 @@ input{
     border-radius: 5px;
 }
 
+.contact-us-title{
+    text-align: center;
+}
+
 .contact-us-bo{
-    margin: 50px 0 0 30px;
+    margin: 50px 30px 0 30px;
 }
 
 .contact-us-map{
     margin-bottom: 40px;
+}
+
+.contact-us-map-bo{
+    display: flex;
 }
 
 .contact-us-phone{
@@ -91,9 +108,53 @@ input{
     margin-bottom: 40px;
 }
 
-i{
-    border-radius: 50%;
-    background-color: rgb(12, 12, 12);
-    height: 30px;
-    width: 30px;
+.icons{
+    margin-right: 30px;
+}
+
+input::placeholder{
+    padding-left: 10px;
+}
+
+textarea::placeholder{
+    padding-left: 10px;
+}
+
+.form-group-name-email{
+    display: flex;
+    
+}
+
+.input-email{
+     padding-left: 9px;
+}
+
+.error-name{
+    font-size: 14px;
+    font-weight: bold;
+    color: #9f3a38;
+    text-align: left;
+    margin: 0px 0px 0px 8px;
+    padding: 0px;
+    margin-top: 2px;
+}
+
+.error-email{
+    font-size: 14px;
+    font-weight: bold;
+    color: #9f3a38;
+    text-align: left;
+    margin: 0px 0px 0px 8px;
+    padding: 0px;
+    margin-top: 2px;
+}
+
+.error-subject{
+    font-size: 14px;
+    font-weight: bold;
+    color: #9f3a38;
+    text-align: left;
+    margin: 0px 0px 0px 8px;
+    padding: 0px;
+    margin-top: 2px;
 }
