@@ -34,7 +34,7 @@
                 <div class="error-subject" id="error-subject"  style="visibility: hidden;">Please enter your subject</div>
             </div>
             <div class="form-group">
-                <textarea name="message" id="message" cols="30" rows="8" placeholder="Message" class="input-message" id="ContactMessage"></textarea>
+                <textarea cols="30" rows="8" placeholder="Message" class="input-message" id="ContactMessage"></textarea>
                 <div class="error-message" id="error-message"  style="visibility: hidden;">Please enter your message</div>
             </div>
             <button type="button" class="btn" onclick="checkOption()">Send Message</button>
@@ -86,9 +86,10 @@
             let ContactName = document.getElementById("ContactName").value;
             let ContactEmail = document.getElementById("ContactEmail").value;
             let ContactSubject = document.getElementById("ContactSubject").value;
-        //    let ContactMessage = document.getElementById("ContactMessage").value;
+            let ContactMessage = document.getElementById("ContactMessage").value;
+        //    console.log(ContactMessage, ContactMessage.value);
             const emailRegex=/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
-            console.log(ContactName);
+            // console.log(ContactName);
 
             let minLength = 6;
             let maxLength = 32;
@@ -122,15 +123,15 @@
                 document.getElementById("error-subject").style.visibility="hidden";
             }
 
-            // if(ContactMessage.length==0){
-            //     document.getElementById("error-message").style.visibility="visible";
-            // }else if(ContactMessage.length < minLength || ContactMessage.length > maxLength){
-            //     document.getElementById("error-message").style.visibility="visible";
-            //     document.getElementById("error-message").textContent="Please enter 6 characters";
-            // }
-            // else{
-            //     document.getElementById("error-message").style.visibility="hidden";
-            // }
+            if(ContactMessage.length==0){
+                document.getElementById("error-message").style.visibility="visible";
+            }else if(ContactMessage.length < minLength || ContactMessage.length > maxLength){
+                document.getElementById("error-message").style.visibility="visible";
+                document.getElementById("error-message").textContent="Please enter 6 characters";
+            }
+            else{
+                document.getElementById("error-message").style.visibility="hidden";
+            }
         }
     </script>
 </body>
