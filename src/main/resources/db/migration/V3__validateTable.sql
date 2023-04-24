@@ -1,0 +1,1 @@
+ALTER TABLE users MODIFY role varchar(45);

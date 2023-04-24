@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://wwww.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./contactUs/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="./contactUs/js/postrequest.js"></script>
+    <style>
+         .text-center-msg{
+            text-align: center;
+            color: green;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <div class="contact-title">
+        <h2>Contact Form</h2>
+    </div>
+<!--    <th:block th:if="${session.msg}">-->
+<!--        <p class="text-center-msg">[[${session.msg}]]</p>-->
+<!--        <th:block th:text="${#session.removeAttribute('msg')}"></th:block>-->
+<!--    </th:block>-->
+    <p class="">[[${message}]]</p>
+    <form action="" class="forms"  id="postResultDiv" th:object="${contact}">
+        <div class="form-title">
+            <h2>Get in touch</h2>
+        </div>
+
+        <div class="form-group">
+            <div class="form-group-name-email">
+                <div>
+                    <input type="text" name="name" placeholder="Name" id="ContactName" class="input-name"  th:field="*{name}" th:value="*{name}">
+<!--                    <div class="error-name" id="error-name"  style="visibility: hidden;">Please enter your name</div>-->
+                    <div class="erro-name" th:if="${#fields.hasErrors('name')}" th:errors="*{name}"></div>
+                </div>
+                <div class="input-email">
+                    <input type="text" name="email" placeholder="Email" id="ContactEmail"  th:field="*{email}" th:value="*{email}">
+                    <div class="error-email" th:if="${#fields.hasErrors('email')}" th:errors="*{email}"></div>
+<!--                    <div class="error-email" id="error-email"  style="visibility: hidden;">Please enter your email</div>-->
+                </div>
+            </div>
+        </div>
+        <div class="form-group">
+            <input type="text" name="subject" placeholder="Subject" class="input-subjects" id="ContactSubject"  th:field="*{subject}" th:value="*{subject}">
+            <div class="error-subject" th:if="${#fields.hasErrors('subject')}" th:errors="*{subject}"></div>
+<!--            <div class="error-subject" id="error-subject"  style="visibility: hidden;">Please enter your subject</div>-->
+        </div>
+        <div class="form-group">
+            <textarea cols="30" rows="8" placeholder="Message" class="input-message" id="ContactMessage" name="message"  th:field="*{message}" th:value="*{message}"></textarea>
+            <div class="error-message" th:if="${#fields.hasErrors('message')}" th:errors="*{message}"></div>
+<!--            <div class="error-message" id="error-message"  style="visibility: hidden;">Please enter your message</div>-->
+        </div>
+        <button type="button" class="btn" >Send Message</button>
+        <div class="contact-us">
+            <div class="contact-us-bo">
+                <div class="contact-us-title">
+                    <h2>Contact us</h2>
+                </div>
+                <div class="contact-us-map">
+                    <div class="contact-us-map-bo">
+                        <div class="icons">
+                            <i class="fa fa-map-marker" aria-hidden="true"></i>
+                        </div>
+                        <strong>Address:</strong> 198 West 21th Street, Suite 721 New York NY 10016
+                    </div>
+                </div>
+                <div class="contact-us-phone">
+                    <div class="contact-us-map-bo">
+                        <div class="icons">
+                            <i class="fa fa-phone" aria-hidden="true"></i>
+                        </div>
+                        <strong>Phone:</strong> + 1235 2355 98
+                    </div>
+                </div>
+                <div class="contact-us-email">
+                    <div class="contact-us-map-bo">
+                        <div class="icons">
+                            <i class="fa fa-paper-plane" aria-hidden="true"></i>
+                        </div>
+                        <strong>Email:</strong> info@yoursite.com
+                    </div>
+                </div>
+                <div class="contact-us-website">
+                    <div class="contact-us-map-bo">
+                        <div class="icons">
+                            <i class="fa fa-globe" aria-hidden="true"></i>
+                        </div>
+                        <strong>Website:</strong> yoursite.com
+                    </div>
+                </div>
+            </div>
+        </div>
+    </form>
+
+    </div>
+</div>
+
+<script>
+
+        function checkOption(){
+            let ContactName = document.getElementById("ContactName").value;
+            let ContactEmail = document.getElementById("ContactEmail").value;
+            let ContactSubject = document.getElementById("ContactSubject").value;
+            let ContactMessage = document.getElementById("ContactMessage").value;
+        //    console.log(ContactMessage, ContactMessage.value);
+<!--            var check = true;-->
+            const emailRegex=/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+            // console.log(ContactName);
+
+            let minLength = 6;
+            let maxLength = 32;
+            if (ContactName.length==0) {
+                document.getElementById("error-name").style.visibility="visible";
+<!--                check=false;-->
+            }
+            else if(ContactName.length < minLength || ContactName.length > maxLength ){
+                document.getElementById("error-name").style.visibility="visible"
+                document.getElementById("error-name").textContent="Your name 6 characters";
+<!--                check=false;-->
+            }else{
+                document.getElementById("error-name").style.visibility="hidden";
+<!--                check=true;-->
+            }
+
+            if(ContactEmail.length==0){
+                document.getElementById("error-email").style.visibility="visible";
+<!--                 check=false;-->
+            }else if(!ContactEmail.match(emailRegex) ){
+                document.getElementById("error-email").style.visibility="visible";
+                document.getElementById("error-email").textContent="Please enter a valid e-mail";
+<!--                 check=false;-->
+            }
+            else{
+                document.getElementById("error-email").style.visibility="hidden";
+<!--                check=true;-->
+            }
+
+            if(ContactSubject.length==0){
+                document.getElementById("error-subject").style.visibility="visible";
+<!--                check=false;-->
+            }else if(ContactSubject.length < minLength || ContactSubject.length > maxLength){
+                document.getElementById("error-subject").style.visibility="visible";
+                document.getElementById("error-subject").textContent="Please enter 6 characters";
+<!--                check=false;-->
+            }
+            else{
+                document.getElementById("error-subject").style.visibility="hidden";
+<!--                 check=true;-->
+            }
+
+            if(ContactMessage.length==0){
+                document.getElementById("error-message").style.visibility="visible";
+<!--                   check=false;-->
+            }else if(ContactMessage.length < minLength || ContactMessage.length > maxLength){
+                document.getElementById("error-message").style.visibility="visible";
+                document.getElementById("error-message").textContent="Please enter 6 characters";
+<!--                   check=false;-->
+            }
+            else{
+                document.getElementById("error-message").style.visibility="hidden";
+<!--                  check=true;-->
+            }
+
+<!--            if(check){-->
+<!--                ajaxPost();-->
+
+<!--            }-->
+
+        }
+
+<!--        function ajaxPost() {-->
+
+<!--				// PREPARE FORM DATA-->
+<!--				var formData = {-->
+<!--					name : $("#contactName").val(),-->
+<!--					email: $("#contactEmail").val(),-->
+<!--					subject: $("#contactSubject").val(),-->
+<!--					message: $("#contactMessage").val()-->
+<!--				}-->
+
+<!--				// DO POST-->
+<!--				$.ajax({-->
+<!--					type : "POST",-->
+<!--					contentType : "application/json",-->
+<!--					url : "saveContact",-->
+<!--					data : JSON.stringify(formData),-->
+<!--					dataType : 'json',-->
+<!--					success : function(result) {-->
+<!--						if (result.status == "success") {-->
+<!--							$("#postResultDiv").html(-->
+<!--									"" + result.data.contactName-->
+<!--											+ "Post Successfully! <br>"-->
+<!--											+ "-&ndash;&gt; Congrats !!" + "</p>");-->
+<!--						} else {-->
+<!--							$("#postResultDiv").html("<strong>Error</strong>");-->
+<!--						}-->
+<!--						console.log(result);-->
+<!--					},-->
+<!--					error : function(e) {-->
+<!--						alert("Error!")-->
+<!--						console.log("ERROR: ", e);-->
+<!--					}-->
+<!--				});-->
+
+<!--			}-->
+
+    </script>
+</body>
+</html>

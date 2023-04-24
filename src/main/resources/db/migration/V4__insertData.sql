@@ -1,0 +1,2 @@
+INSERT INTO users(email,password,fullname,phone,role) VALUES ('teonv@gmail.com','$2a$10$HnBd5gzNFGzobncMy9rCZOhR6wXI6VI4gjpb4RhH9aVTSrX29bfMy','nguyen van teo', '0123456789','ROLE_USER');
+INSERT INTO users(email,password,fullname,phone,role) VALUES ('benedwards@gmail.com','$2a$10$CMG6RQ.VepF0SWRliH/KJe93OSLn/GDglPtZtj0bBwfd/.sdOxMU2','Ben Edwards', '0987654321','ROLE_USER')

@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://wwww.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="./contactUs/css/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<!--  <script src="./contactUs/js/postrequest.js"></script>-->
+  <style>
+         .text-center-msg{
+            text-align: center;
+            color: green;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+  <div class="contact-title">
+    <h2>Contact Form</h2>
+  </div>
+      <th:block th:if="${session.msg}">
+          <p class="text-center-msg">[[${session.msg}]]</p>
+          <th:block th:text="${#session.removeAttribute('msg')}"></th:block>
+      </th:block>
+  <p class="text-center-msg">[[${message}]]</p>
+  <form action="createContact" name="contact" class="forms" method="post" th:object="${contact}">
+    <div class="form-title">
+      <h2>Get in touch</h2>
+    </div>
+
+    <div class="form-group">
+      <div class="form-group-name-email">
+        <div>
+          <input type="text"  placeholder="Name"  class="input-name" th:field="*{name}" th:value="*{name}">
+          <!--                    <div class="error-name" id="error-name"  style="visibility: hidden;">Please enter your name</div>-->
+          <div class="error-name" th:if="${#fields.hasErrors('name')}" th:errors="*{name}"></div>
+        </div>
+        <div class="input-email">
+          <input type="text"  placeholder="Email" th:field="*{email}" th:value="*{email}">
+          <div class="error-email" th:if="${#fields.hasErrors('email')}" th:errors="*{email}"></div>
+          <!--                    <div class="error-email" id="error-email"  style="visibility: hidden;">Please enter your email</div>-->
+        </div>
+      </div>
+    </div>
+    <div class="form-group">
+      <input type="text"  placeholder="Subject" class="input-subjects" th:field="*{subject}" th:value="*{subject}">
+      <div class="error-subject" th:if="${#fields.hasErrors('subject')}" th:errors="*{subject}"></div>
+      <!--            <div class="error-subject" id="error-subject"  style="visibility: hidden;">Please enter your subject</div>-->
+    </div>
+    <div class="form-group">
+      <textarea cols="30" rows="8" placeholder="Message" class="input-message" th:field="*{message}" th:value="*{message}"></textarea>
+      <div class="error-message" th:if="${#fields.hasErrors('message')}" th:errors="*{message}"></div>
+      <!--            <div class="error-message" id="error-message"  style="visibility: hidden;">Please enter your message</div>-->
+    </div>
+    <button type="submit" class="btn" >Send Message</button>
+    <div class="contact-us">
+      <div class="contact-us-bo">
+        <div class="contact-us-title">
+          <h2>Contact us</h2>
+        </div>
+        <div class="contact-us-map">
+          <div class="contact-us-map-bo">
+            <div class="icons">
+              <i class="fa fa-map-marker" aria-hidden="true"></i>
+            </div>
+            <strong>Address:</strong> 198 West 21th Street, Suite 721 New York NY 10016
+          </div>
+        </div>
+        <div class="contact-us-phone">
+          <div class="contact-us-map-bo">
+            <div class="icons">
+              <i class="fa fa-phone" aria-hidden="true"></i>
+            </div>
+            <strong>Phone:</strong> + 1235 2355 98
+          </div>
+        </div>
+        <div class="contact-us-email">
+          <div class="contact-us-map-bo">
+            <div class="icons">
+              <i class="fa fa-paper-plane" aria-hidden="true"></i>
+            </div>
+            <strong>Email:</strong> info@yoursite.com
+          </div>
+        </div>
+        <div class="contact-us-website">
+          <div class="contact-us-map-bo">
+            <div class="icons">
+              <i class="fa fa-globe" aria-hidden="true"></i>
+            </div>
+            <strong>Website:</strong> yoursite.com
+          </div>
+        </div>
+      </div>
+    </div>
+  </form>
+
+</div>
+</div>
+
+
+</body>
+</html>

@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://wwww.thymeleaf.org" xmlns:sec="https://www.thymeleaf.org/thymeleaf-extras-springsecurity5">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .text-success{
+            color: green;
+        }
+    </style>
+</head>
+<body>
+    <h1 class="text-success">Login Successfully</h1>
+    <div sec:authorize="isAuthenticated()">
+        Authenticated as <span sec:authentication="name"></span></div>
+    <a href="/logout">Logout</a>
+</body>
+</html>

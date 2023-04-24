@@ -1,0 +1,170 @@
+*{
+    box-sizing: border-box;
+}
+
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background-color: #ffffff;
+}
+
+.container{
+    height: 600px;
+    width: 650px;
+}
+
+.contact-title{
+    text-align: center;
+}
+
+.forms{
+    border: 1px solid #ffffff;
+    padding-left: 30px;
+    border-radius: 5px;
+    box-shadow: 0px 5px 26px 8px #cccccc;
+    position: relative;
+}
+
+.form-group{
+    margin-bottom: 15px;
+}
+
+input{
+    border: 1px solid #cccccc;
+    border-radius: 5px;
+    height: 40px;
+    outline: none;
+    color: #000000;
+}
+
+textarea{
+    border: 1px solid #cccccc;
+    border-radius: 5px;
+    outline: none;
+}
+
+.input-subjects{
+    width: 358px;
+}
+
+.input-message{
+    width: 358px;
+}
+
+.btn{
+    height: 40px;
+    width: 110px;
+    margin-bottom: 30px;
+    border-radius: 5px;
+    border: none;
+    background-color: rgb(87, 140, 240);
+    color: #ffffff;
+    cursor: pointer;
+}
+
+.btn:hover{
+    background-color: rgb(111, 152, 228);
+}
+
+.contact-us{
+    position: absolute;
+    border: 1px solid;
+    height: 500px;
+    width: 340px;
+    right: -120px;
+    top: -27px;
+    background-color: rgb(87, 140, 240);
+    color: #ffffff;
+    border-radius: 5px;
+}
+
+.contact-us-title{
+    text-align: center;
+}
+
+.contact-us-bo{
+    margin: 50px 30px 0 30px;
+}
+
+.contact-us-map{
+    margin-bottom: 40px;
+}
+
+.contact-us-map-bo{
+    display: flex;
+}
+
+.contact-us-phone{
+    margin-bottom: 40px;
+}
+
+.contact-us-email{
+    margin-bottom: 40px;
+}
+
+.contact-us-website{
+    margin-bottom: 40px;
+}
+
+.icons{
+    margin-right: 30px;
+}
+
+input::placeholder{
+    padding-left: 10px;
+}
+
+textarea::placeholder{
+    padding-left: 10px;
+}
+
+.form-group-name-email{
+    display: flex;
+
+}
+
+.input-email{
+     padding-left: 9px;
+}
+
+.error-name{
+    font-size: 14px;
+    font-weight: bold;
+    color: #9f3a38;
+    text-align: left;
+    margin: 0px 0px 0px 8px;
+    padding: 0px;
+    margin-top: 2px;
+}
+
+.error-email{
+    font-size: 14px;
+    font-weight: bold;
+    color: #9f3a38;
+    text-align: left;
+    margin: 0px 0px 0px 8px;
+    padding: 0px;
+    margin-top: 2px;
+}
+
+.error-subject{
+    font-size: 14px;
+    font-weight: bold;
+    color: #9f3a38;
+    text-align: left;
+    margin: 0px 0px 0px 8px;
+    padding: 0px;
+    margin-top: 2px;
+}
+
+.error-message{
+    font-size: 14px;
+    font-weight: bold;
+    color: #9f3a38;
+    text-align: left;
+    margin: 0px 0px 0px 8px;
+    padding: 0px;
+    margin-top: 2px;
+}
